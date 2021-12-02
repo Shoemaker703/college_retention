@@ -8,7 +8,7 @@
 
 ## Overview
 
-Retention rates are one of the most important student success metrics used by colleges in the US. Even a brief search on websites like [Inside Higher Ed](https://www.insidehighered.com/) or [The Chronicle of Higher Education]((https://www.chronicle.com/)) will return a number of articles describing the importance of retention rates and strategies for departments to increase student retention. Given that graduation is one of the primary goals of attending college, retention rates can be thought of as an early indicator of what graduation rates will be later down the road. Given the importance of retention rates, this project seeks to understand the relationship between retention rates and college spending patterns in both academics and athletics. The hope is that if there are patterns between spending and retention rates, that colleges can use that information to redirect funds to increase student retention.
+Retention rates are one of the most important student success metrics used by colleges in the US. Even a brief search on websites like [Inside Higher Ed](https://www.insidehighered.com/) or [The Chronicle of Higher Education](https://www.chronicle.com/) will return a number of articles describing the importance of retention rates and strategies for departments to increase student retention. Given that graduation is one of the primary goals of attending college, retention rates can be thought of as an early indicator of what graduation rates will be later down the road. Given the importance of retention rates, this project seeks to understand the relationship between retention rates and college spending patterns in both academics and athletics. The hope is that if there are patterns between spending and retention rates, that colleges can use that information to redirect funds to increase student retention.
 
 ## Business Understanding
 
@@ -57,7 +57,7 @@ Based on the predictions from the random forest model, I was able to determine t
 
 ## Information
 
-Check out our [notebook](https://github.com/Shoemaker703/college_retention) for a more thorough discussion of our project, as well as our [presentation](https://github.com/Shoemaker703/time_series_project/blob/main/Presentation.pdf).
+Check out our [notebook](https://github.com/Shoemaker703/college_retention/blob/main/Final%20Notebook.ipynb) for a more thorough discussion of our project, as well as our [presentation](https://github.com/Shoemaker703/time_series_project/blob/main/Presentation.pdf).
 
 ## Repository Structure
 
