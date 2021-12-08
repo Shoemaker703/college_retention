@@ -1,4 +1,4 @@
-# How Does College Academic and Athletic Spending Impact Retention Rates?
+# Impacts of Collegiate Spending Patterns on Student Retention Rates
 
 ![UT Austin](https://github.com/Shoemaker703/college_retention/blob/main/Images/Austin_Stadium.jpeg)
 
@@ -34,6 +34,9 @@ The data used in this project comes from three sources:
 - Average faculty salaries
 - Endowment size
 
+## Reproducibility
+For more detailed instructions regarding how I collected and merged the data from these three sources, please check out my 'Data Collection' notebook in the ['Reproducibility' folder in this GitHub repository](https://github.com/Shoemaker703/college_retention/tree/main/Reproducibility). This notebook contains step-by-step instructions (including screenshots) of how I gathered the data for the analysis below, in case you are interested in recreating and/or building on any part of this project.
+
 ## Modeling
 
 The target variable is a weighted retention rate described above, using values above 81% to represent "above average retention rates" and values at or below 81% to represent "below average retention rates." A 70%/20% train-test split was created along with a 10% holdout test set.
@@ -45,7 +48,7 @@ False Negative: A school is identified as having below average retention rates b
 
 In this instance, I think false positives are more problematic than false negatives given that it is more of a problem to identify a school as above average when it is not. Thus, I will try and maximize precision scores throughout the modeling process.
 
-Seven different model types were run (logistic regression, KNN, decision tree, decision tree grid search, gradient boost, random forest, and random forest grid search). The final model selected was the random forest grid search, which had precision scores of .885 for the cross-validation process, .947 on the testing data, and .814 on the holdout test.
+Seven different classification model types were run (logistic regression, KNN, decision tree, decision tree grid search, gradient boost, random forest, and random forest grid search). The final model selected was the random forest grid search, which had precision scores of .899 for the cross-validation process, .922 on the testing data, and .944 on the holdout test.
 
 ## Conclusions
 
@@ -57,7 +60,7 @@ Based on the predictions from the random forest model, I was able to determine t
 
 ## Information
 
-Check out our [notebook](https://github.com/Shoemaker703/college_retention/blob/main/Final%20Notebook.ipynb) for a more thorough discussion of our project, as well as our [presentation](https://github.com/Shoemaker703/time_series_project/blob/main/Presentation.pdf).
+Check out my [notebook](https://github.com/Shoemaker703/college_retention/blob/main/Summary%20Notebook.ipynb) for a more thorough discussion of my project, as well as my [presentation](https://github.com/Shoemaker703/time_series_project/blob/main/Presentation.pdf).
 
 ## Repository Structure
 
@@ -67,9 +70,11 @@ Check out our [notebook](https://github.com/Shoemaker703/college_retention/blob/
 │   └── ...
 ├── Images                              <- Folder containing images used in the notebook and this README
 │   └── ...
+├── Reproducibility                     <- Folder containing steps for collecting the data used in the summary notebook
+│   └── ...
 ├── .gitignore                          <- File specifying files/directories to ignore
-├── Final Notebook.ipynb                <- Final Jupyter Notebook containing full code and narrative for this project
 ├── README.md                           <- Top-level README
+├── Summary Notebook.ipynb              <- Final Jupyter Notebook containing full code and narrative for this project
 └── utils.py                            <- Evaluation function used for modeling process throughout notebook
 
 ``` 
