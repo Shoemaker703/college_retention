@@ -58,31 +58,37 @@ Seven different classification model types were run (logistic regression, KNN, d
 According to the random forest grid search model, the most significant features in this model are "Average Faculty Salary" and 'Total Academic Spending (University-Wide)', which account for 20.8% and 10.5% of the value of features in this model, respectively. If we look at the features used in the training data, there are 62 total features, only 4 of them are clearly related to academic spending ('Total Academic Spending (University-Wide)', 'Average Faculty Salary', 'Endowment', 'Academic Spending per FTE Student'). The fact that all 4 of these features are in the top 6 most important features in the random forest model reinforces the idea that academic spending is more important to student retention rates than athletic spending. 
 However, if we examine the other spending metrics in this notebook, we can see that universities have spent more on athletics and have increased athletic spending at a greater rate than academic spending over the course of the 15 years included in this data: 
 We can also see based on the trends for above and below average predictions that athletic spending is the highest overall amount at above average schools (both for student athletes and football coaches).\
-Average Football Coach Salaries\
+<br>
+**Average Football Coach Salaries**\
     - Above Average Colleges: $337,245\
     - Below Average Colleges: $82,614\
-Average Faculty Salaries\
+**Average Faculty Salaries**\
     - Above Average Colleges: $91,076\
     - Below Average Colleges: $68,283\
-Athletic Spending per Student Athlete\
+**Athletic Spending per Student Athlete**\
     - Above Average Colleges: $99,830\
     - Below Average Colleges: $44,573\
-Academic Spending per FTE Student\
+**Academic Spending per FTE Student**\
     - Above Average Colleges: $30,059\
     - Below Average Colleges: $15,610\
+<br>
+<br>
 Athletic spending rates have also been increasing at a greater rate than academic spending rates from 2005–2019.\
-Average Football Coach Salary Rate of Increase\
+<br>
+**Average Football Coach Salary Rate of Increase**\
     - Above Average Colleges: 236.6%\
     - Below Average Colleges: 98.2%\
-Average Faculty Salary Rate of Increase\
+**Average Faculty Salary Rate of Increase**\
     - Above Average Colleges: 24.2%\
     - Below Average Colleges: 26.8%\
-Athletic Spending per Student Athlete Rate of Increase\
+**Athletic Spending per Student Athlete Rate of Increase**\
     - Above Average Colleges: 75.3%\
     - Below Average Colleges: 64.0%\
-Academic Spending per FTE Student Rate of Increase\
+**Academic Spending per FTE Student Rate of Increase**\
     - Above Average Colleges: 44.7%\
     - Below Average Colleges: 45.5%\
+<br>
+<br>
 Thus, it might be beneficial for universities interested in increasing retention rates to strike more of a balance between faculty salaries and football coaching salaries by either paying faculty more and/or paying football coaches less.
 
 ## Information
