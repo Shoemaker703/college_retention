@@ -60,7 +60,7 @@ Based on the predictions from the random forest model, I was able to determine t
 
 ## Information
 
-Check out my [notebook](https://github.com/Shoemaker703/college_retention/blob/main/Summary%20Notebook.ipynb) for a more thorough discussion of my project, as well as my [presentation](https://github.com/Shoemaker703/time_series_project/blob/main/Presentation.pdf).
+Check out my [notebook](https://github.com/Shoemaker703/college_retention/blob/main/Summary%20Notebook.ipynb) for a more thorough discussion of my project, as well as my [presentation](https://github.com/Shoemaker703/college_retention/blob/main/presentation.pdf).
 
 ## Repository Structure
 
@@ -75,6 +75,7 @@ Check out my [notebook](https://github.com/Shoemaker703/college_retention/blob/m
 ├── .gitignore                          <- File specifying files/directories to ignore
 ├── README.md                           <- Top-level README
 ├── Summary Notebook.ipynb              <- Final Jupyter Notebook containing full code and narrative for this project
+├── presentation.pdf                    <- Keynote presentation slides PDF
 └── utils.py                            <- Evaluation function used for modeling process throughout notebook
 
 ``` 
