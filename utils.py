@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from pandas import DataFrame
 
 # functions
-# Borrowed from Phase 3 project with Andrew (https://github.com/andrewwhitman/BirdConservation/blob/main/BirdConservation.ipynb)
+# Borrowed from Bird Conservation project with Andrew (https://github.com/andrewwhitman/BirdConservation/blob/main/BirdConservation.ipynb)
 def evaluate(model, X_tr, y_tr, X_te, y_te, grid_search=False, save_fig_path=False):
     """
     Fit a model to train data and calculate classification metrics for train and test data.

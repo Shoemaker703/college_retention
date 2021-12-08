@@ -12,7 +12,7 @@ Retention rates are one of the most important student success metrics used by co
 
 ## Business Understanding
 
-[According to the National Center for Education Statistics (NCES)](https://nces.ed.gov/programs/coe/indicator/ctr), "Retention rates measure the percentage of first-time undergraduate students who return to the same institution the following fall, and graduation rates measure the percentage of first-time, full-time undergraduate students who complete their program at the same institution within a specified period of time." Figure 1 below is from the NCES website linked above, which shows retention rates for all college, public, private nonprofit, and private for-profit institutions. The figure also includes additional information for three different acceptance rates: all, open, and less than 25%. 
+[According to the National Center for Education Statistics (NCES)](https://nces.ed.gov/programs/coe/indicator/ctr), "Retention rates measure the percentage of first-time undergraduate students who return to the same institution the following fall." Figure 1 below is from the NCES website linked above, which shows retention rates for all college, public, private nonprofit, and private for-profit institutions. The figure also includes additional information for three different acceptance rates: all, open, and less than 25%. 
 
 The target variable in this project will be student retention rates. Given that this project focuses on all types of college institutions, we can take the 81% rate indicated by the "All institutions—All acceptance rates" on the NCES website to represent our average retention rate. This rate only includes full-time students, but many of the schools in this analysis have both full- and part-time students. Thus, I will create a "weighted retention rate" for each school calculated by adding the number of retained full- and part-time students, divided by the total number of students enrolled at the institution. [Part-time retention rates](https://nces.ed.gov/ipeds/TrendGenerator/app/build-table/7/33?rid=4&cid=1) are often much lower than full-time retention rates, which means many schools in this analysis will be below this 81% threshold. However, given the importance of retention rates for all students, I think it is okay to set a high bar for this metric.
 
@@ -35,6 +35,7 @@ The data used in this project comes from three sources:
 - Endowment size
 
 ## Reproducibility
+
 For more detailed instructions regarding how I collected and merged the data from these three sources, please check out my 'Data Collection' notebook in the ['Reproducibility' folder in this GitHub repository](https://github.com/Shoemaker703/college_retention/tree/main/Reproducibility). This notebook contains step-by-step instructions (including screenshots) of how I gathered the data for the analysis below, in case you are interested in recreating and/or building on any part of this project.
 
 ## Modeling
@@ -52,11 +53,37 @@ Seven different classification model types were run (logistic regression, KNN, d
 
 ## Conclusions
 
-According to the random forest model, the most significant features in this model are "Average Faculty Salary" and 'Total Academic Spending (University-Wide)', which account for 13.5% and 8.8% of the value of features in this model, respectively. This, along with the 'Academic Spending per FTE Student' and 'Endowment' columns being ranked as important features in this model, suggests that academic spending is more important to student retention than athletic spending. However, if we examine the other spending metrics in this notebook, we can see that universities have been increasing athletic spending at a greater rate than academic spending over the course of the 15 years included in this data. Thus, it might be beneficial for universities interested in increasing retention rates to find more of a balance between faculty salaries and football coaching salaries by either paying faculty more and/or paying football coaches less.
-
 ![Final Comparison Bar Chart](https://github.com/Shoemaker703/college_retention/blob/main/Images/feature_importances.png)
 
-Based on the predictions from the random forest model, I was able to determine that FBS schools are likely to have better retention rates than their FCS and NFS counterparts. Furthermore, within the FBS, schools in the power 5 conferences seem to have a greater likelihood of having above average retention rates than others. Thus, one general comment regarding these results might be that the results of this model are more relevant to schools outside of the FBS power 5. However, one possible reason for this could be that schools in the FBS power 5 conferences tend to have larger budgets than other schools, and thus are able to spend enough money on academics and athletics to be able to maintain above average retention rates and quality athletics programs. Thus, one possible approach would be for colleges to spend less on their athletics departments since they will not make money from them anyway, and redirect that spending towards academic departments which could have a positive impact on student retention rates.
+According to the random forest grid search model, the most significant features in this model are "Average Faculty Salary" and 'Total Academic Spending (University-Wide)', which account for 20.8% and 10.5% of the value of features in this model, respectively. If we look at the features used in the training data, there are 62 total features, only 4 of them are clearly related to academic spending ('Total Academic Spending (University-Wide)', 'Average Faculty Salary', 'Endowment', 'Academic Spending per FTE Student'). The fact that all 4 of these features are in the top 6 most important features in the random forest model reinforces the idea that academic spending is more important to student retention rates than athletic spending. 
+However, if we examine the other spending metrics in this notebook, we can see that universities have spent more on athletics and have increased athletic spending at a greater rate than academic spending over the course of the 15 years included in this data: 
+We can also see based on the trends for above and below average predictions that athletic spending is the highest overall amount at above average schools (both for student athletes and football coaches).
+Average Football Coach Salaries
+    - Above Average Colleges: $337,245
+    - Below Average Colleges: $82,614
+Average Faculty Salaries
+    - Above Average Colleges: $91,076
+    - Below Average Colleges: $68,283
+Athletic Spending per Student Athlete
+    - Above Average Colleges: $99,830
+    - Below Average Colleges: $44,573
+Academic Spending per FTE Student
+    - Above Average Colleges: $30,059
+    - Below Average Colleges: $15,610
+Athletic spending rates have also been increasing at a greater rate than academic spending rates from 2005–2019.
+Average Football Coach Salary Rate of Increase
+    - Above Average Colleges: 236.6%
+    - Below Average Colleges: 98.2%
+Average Faculty Salary Rate of Increase
+    - Above Average Colleges: 24.2%
+    - Below Average Colleges: 26.8%
+Athletic Spending per Student Athlete Rate of Increase
+    - Above Average Colleges: 75.3%
+    - Below Average Colleges: 64.0%
+Academic Spending per FTE Student Rate of Increase
+    - Above Average Colleges: 44.7%
+    - Below Average Colleges: 45.5%
+Thus, it might be beneficial for universities interested in increasing retention rates to strike more of a balance between faculty salaries and football coaching salaries by either paying faculty more and/or paying football coaches less.
 
 ## Information
 
